@@ -1,5 +1,5 @@
 class BankAccountsController < ApplicationController
   def index
-    @bank_accounts = BankAccount.all
+    @bank_accounts = jsonify(BankAccount.all)
   end
 end
