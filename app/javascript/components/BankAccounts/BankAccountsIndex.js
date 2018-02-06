@@ -13,7 +13,6 @@ BankAccountsIndex.defaultProps = {
 }
 
 function BankAccountsIndex ({ bank_accounts }) {
-  console.log(bank_accounts)
   return (
     <div>
       {
