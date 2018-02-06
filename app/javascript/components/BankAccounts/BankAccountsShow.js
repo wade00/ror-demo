@@ -17,14 +17,17 @@ function BankAccountsShow ({ bank_account }) {
     <div>
       <h1>{ attributes.name }</h1>
       <a
-      className="inline-link"
-      href={`/bank_accounts/${attributes.id}/edit`}>
-      Edit
+        className="inline-link"
+        href={`/bank_accounts/${attributes.id}/edit`}>
+        Edit
       </a>
       <div className="bank-account-list-cell">
         <p>Routing Number: { attributes.routing_number }</p>
         <p>Current Balance: ${ attributes.balance }</p>
       </div>
+      <a href="/bank_accounts" className="button button-left">
+        Back
+      </a>
     </div>
   )
 }

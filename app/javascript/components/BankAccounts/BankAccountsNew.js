@@ -21,6 +21,9 @@ function BankAccountsNew ({ banks, authenticity_token }) {
         authenticity_token={ authenticity_token }
         banks={ banks }
       />
+      <a href="/bank_accounts" className="button button-left">
+        Back
+      </a>
     </div>
   )
 }

@@ -40,9 +40,13 @@ a{
   float: right;
 }
 
-.delete-button{
-  background-color: $red;
-  color: $white;
+.button-left{
+  float: left;
+  clear: both;
+}
+
+.delete-link{
+  color: $red;
 }
 
 .bank-account-list-cell{

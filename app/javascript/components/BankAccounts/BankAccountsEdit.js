@@ -23,13 +23,16 @@ function BankAccountsEdit ({ bank_account, authenticity_token }) {
         data-method="delete"
         href={`/bank_accounts/${attributes.id}`}
         rel="nofollow"
-        className="inline-link">
+        className="inline-link delete-link">
         Delete
       </a>
       <BankAccountsEditForm
         authenticity_token={ authenticity_token }
         bank_account={ bank_account }
       />
+      <a href={`/bank_accounts/${attributes.id}`} className="button button-left">
+        Back
+      </a>
     </div>
   )
 }
