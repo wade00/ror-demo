@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :bank_account do
-    name "Bank Account"
-    routing_number { rand(0..100) }
+    name { %w[Checking Savings].sample }
+    routing_number { Array.new(9) { rand(9) }.join }
   end
 end
