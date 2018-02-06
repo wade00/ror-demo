@@ -19,17 +19,17 @@ function BankAccountsNewForm ({ banks=[], authenticity_token }) {
       <label htmlFor='bank_account[name]'>
         Name&nbsp;
       </label>
-      <input name='bank_account[name]' type='text' />
+      <input name='bank_account[name]' type='text' required />
 
       <label htmlFor='bank_account[routing_number]'>
-        Routing Number&nbsp;
+        Routing Number (9 digit number)&nbsp;
         </label>
-      <input name='bank_account[routing_number]' type='text' />
+      <input name='bank_account[routing_number]' type='text' minlength="9" maxlength="9" pattern="[0-9]" required />
 
       <label htmlFor='bank_account[bank_id]'>
         Bank&nbsp;
       </label>
-      <select name='bank_account[bank_id]'>
+      <select name='bank_account[bank_id]' required>
         {
           banks.map((bank, idx) => {
             return <option key={ idx } value={ bank.id }>{ bank.name }</option>

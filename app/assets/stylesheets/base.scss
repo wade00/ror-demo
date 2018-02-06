@@ -1,6 +1,6 @@
 body{
   font-family: Courier;
-  background-color: #F7F7F7;
+  background-color: $lightgrey;
 }
 
 h1{
@@ -34,7 +34,8 @@ a{
 }
 
 .button{
-  background-color: pink;
+  background-color: $lightgrey;
+  border: 1px solid;
   padding: 10px 15px;
   float: right;
 }
@@ -47,7 +48,7 @@ a{
 .bank-account-list-cell{
   border: 1px solid;
   padding: 10px;
-  margin-bottom: 1px;
+  margin-bottom: 30px;
   text-align: left;
 }
 
@@ -57,8 +58,8 @@ a{
 }
 
 .submit-button{
-  background-color: pink;
-  color: $white;
+  background-color: $lightgrey;
+  border: 1px solid;
   font-size: 20px;
   font-family: Courier;
   width: 100px;
