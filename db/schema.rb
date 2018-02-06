@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180206011652) do
   enable_extension "plpgsql"
 
   create_table "bank_accounts", force: :cascade do |t|
-    t.string "nickname"
+    t.string "name"
     t.string "routing_number"
     t.bigint "bank_id"
     t.index ["bank_id"], name: "index_bank_accounts_on_bank_id"
