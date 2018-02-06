@@ -16,7 +16,7 @@ BankAccountsNew.defaultProps = {
 function BankAccountsNew ({ banks, authenticity_token }) {
   return (
     <div>
-      <h2>Edit Page</h2>
+      <h2>Time to Create a New Account</h2>
       <BankAccountsNewForm
         authenticity_token={ authenticity_token }
         banks={ banks }

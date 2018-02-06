@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <% unless flash.empty? %>
+      <div class="flash-container">
+        <%= react_component("FormErrors", errors: flash[:errors]) %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

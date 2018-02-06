@@ -3,7 +3,11 @@ import { validate } from 'validate.js'
 
 const propTypes = {}
 
-function BankAccountsNewForm ({ banks, authenticity_token }) {
+const defaultProps = {
+  banks: [],
+}
+
+function BankAccountsNewForm ({ banks=[], authenticity_token }) {
   return (
     <form
       role='form'
@@ -27,5 +31,7 @@ function BankAccountsNewForm ({ banks, authenticity_token }) {
 }
 
 BankAccountsNewForm.propTypes = propTypes
+
+BankAccountsNewForm.defaultProps = defaultProps
 
 export default BankAccountsNewForm

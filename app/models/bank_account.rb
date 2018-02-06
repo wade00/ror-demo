@@ -1,7 +1,7 @@
 class BankAccount < ApplicationRecord
   validates_presence_of :name, :routing_number
   validates_uniqueness_of :routing_number
-  validate :routing_number_is_valid
+  validate :routing_number_is_valid, on: :create
 
   def balance
     1200

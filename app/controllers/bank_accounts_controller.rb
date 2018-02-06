@@ -8,10 +8,12 @@ class BankAccountsController < ApplicationController
   end
 
   def create
-    if BankAccount.create(bank_account_params)
+    account = BankAccount.create(bank_account_params)
+    if account.valid?
       redirect_to bank_accounts_path
     else
-      puts "ERRORRRRRR"
+      flash[:errors] = account.errors.full_messages
+      redirect_to new_bank_account_path
     end
   end
 
@@ -28,7 +30,8 @@ class BankAccountsController < ApplicationController
     if account.update(bank_account_params)
       redirect_to bank_account_path(account)
     else
-      puts "ERRORRRRRR"
+      flash[:errors] = account.errors.full_messages
+      redirect_to edit_bank_account_path(account)
     end
   end
 
@@ -37,7 +40,8 @@ class BankAccountsController < ApplicationController
     if account.destroy
       redirect_to bank_accounts_path
     else
-      puts "ERRORRRRRR"
+      flash[:errors] = account.errors.full_messages
+      redirect_to edit_bank_account_path(account)
     end
   end
 
