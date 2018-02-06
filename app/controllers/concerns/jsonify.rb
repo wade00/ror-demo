@@ -1,7 +1,7 @@
 module Jsonify
-  def jsonify(resource)
+  def jsonify(resource, opts={})
     serializer = "#{resource_class(resource)}Serializer".constantize
-    JSON.parse(serializer.new(resource).serialized_json)['data']
+    JSON.parse(serializer.new(resource, opts).serialized_json)['data']
   end
 
   private
