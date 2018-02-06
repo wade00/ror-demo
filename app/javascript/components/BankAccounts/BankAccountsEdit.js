@@ -18,6 +18,13 @@ function BankAccountsEdit ({ bank_account, authenticity_token }) {
   return (
     <div>
       <h2>Edit Page</h2>
+      <a
+        data-confirm="Are you sure?"
+        data-method="delete"
+        href={`/bank_accounts/${attributes.id}`}
+        rel="nofollow">
+        Delete
+      </a>
       <BankAccountsEditForm
         authenticity_token={ authenticity_token }
         bank_account={ bank_account }
