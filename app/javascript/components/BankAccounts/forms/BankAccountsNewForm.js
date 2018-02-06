@@ -16,8 +16,19 @@ function BankAccountsNewForm ({ banks=[], authenticity_token }) {
       method='post'
     >
       <input type='hidden' name='authenticity_token' value={ authenticity_token } />
+      <label htmlFor='bank_account[name]'>
+        Name&nbsp;
+      </label>
       <input name='bank_account[name]' type='text' />
+
+      <label htmlFor='bank_account[routing_number]'>
+        Routing Number&nbsp;
+        </label>
       <input name='bank_account[routing_number]' type='text' />
+
+      <label htmlFor='bank_account[bank_id]'>
+        Bank&nbsp;
+      </label>
       <select name='bank_account[bank_id]'>
         {
           banks.map((bank, idx) => {
@@ -25,7 +36,7 @@ function BankAccountsNewForm ({ banks=[], authenticity_token }) {
           })
         }
       </select>
-      <input type='submit' />
+      <input type='submit' className="submit-button"/>
     </form>
   )
 }

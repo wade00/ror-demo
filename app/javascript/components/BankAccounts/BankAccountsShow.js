@@ -15,15 +15,17 @@ function BankAccountsShow ({ bank_account }) {
   const { attributes } = bank_account
   return (
     <div>
-      <h2>Show Page</h2>
-      <a href={`/bank_accounts/${attributes.id}/edit`}>
-        Edit
+      <h1>{ attributes.name }</h1>
+      <a
+      className="inline-link"
+      href={`/bank_accounts/${attributes.id}/edit`}>
+      Edit
       </a>
-      <h3>{ attributes.name }</h3>
-      <p>{ attributes.routing_number }</p>
-      <p>{ attributes.balance }</p>
+      <div className="bank-account-list-cell">
+        <p>Routing Number: { attributes.routing_number }</p>
+        <p>Current Balance: ${ attributes.balance }</p>
+      </div>
     </div>
-
   )
 }
 

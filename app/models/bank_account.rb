@@ -9,13 +9,14 @@ class BankAccount < ApplicationRecord
 
   def routing_number_is_valid
     return if check_sum_passes
-    errors.add(:routing_number, "not a valid routing number")
+    errors.add(:routing_number, 'not a valid routing number')
   end
 
   private
 
   def check_sum_passes
     # taken from https://gist.github.com/bmatzelle/5502476
+    return false unless routing_number.length == 9
     d = []
     routing_number.each_char { |char| d << char.to_i }
 

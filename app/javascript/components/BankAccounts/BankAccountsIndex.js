@@ -15,14 +15,15 @@ BankAccountsIndex.defaultProps = {
 function BankAccountsIndex ({ bank_accounts }) {
   return (
     <div>
-      <a href="/bank_accounts/new">
-        Add New Account
-      </a>
+      <h1>Available Accounts</h1>
       {
         bank_accounts.map((bank_account, idx) => {
           return <BankAccountsIndexCell key={ idx } bank_account={ bank_account } />
         })
       }
+      <a href="/bank_accounts/new" className="button">
+        Add New Account
+      </a>
     </div>
   )
 }

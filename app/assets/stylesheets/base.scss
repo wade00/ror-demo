@@ -1,0 +1,83 @@
+body{
+  font-family: Courier;
+  background-color: #F7F7F7;
+}
+
+h1{
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.container{
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input{
+  margin-bottom: 15px;
+  width: 100%;
+  margin: 0 auto;
+  height: 20px;
+  padding: 5px;
+  font-family: Courier;
+  font-size: 16px;
+}
+
+a{
+  color: $grey;
+  text-decoration: none;
+  &:hover{
+    cursor: pointer;
+    color: $primary-blue;
+  }
+}
+
+.button{
+  background-color: pink;
+  padding: 10px 15px;
+  float: right;
+}
+
+.delete-button{
+  background-color: $red;
+  color: $white;
+}
+
+.bank-account-list-cell{
+  border: 1px solid;
+  padding: 10px;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+.inline-link{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.submit-button{
+  background-color: pink;
+  color: $white;
+  font-size: 20px;
+  font-family: Courier;
+  width: 100px;
+  height: 40px;
+  float: right;
+  margin-top: 30px;
+  display: block;
+}
+
+label{
+  display: block;
+  text-align: left;
+  margin: 15px 0;
+}
+
+select{
+  width: 100%;
+  border: none;
+  background-color: $white;
+  font-size: 16px;
+  padding: 10px;
+}

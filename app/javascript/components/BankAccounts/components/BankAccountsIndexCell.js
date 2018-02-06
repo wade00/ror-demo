@@ -14,12 +14,13 @@ BankAccountsIndexCell.defaultProps = {
 function BankAccountsIndexCell ({ bank_account }) {
   const { attributes } = bank_account
   return (
-    <div>
-      <a href={`/bank_accounts/${attributes.id}`}>{ attributes.name }</a>
-      <p>{ attributes.routing_number }</p>
-      <p>{ attributes.balance }</p>
-    </div>
-
+    <a href={`/bank_accounts/${attributes.id}`}>
+      <div className="bank-account-list-cell">
+        <p>{ attributes.name }</p>
+        <p>{ attributes.routing_number }</p>
+        <p>${ attributes.balance }</p>
+      </div>
+    </a>
   )
 }
 

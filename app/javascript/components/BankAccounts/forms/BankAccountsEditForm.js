@@ -14,8 +14,11 @@ function BankAccountsEditForm ({ bank_account, authenticity_token }) {
     >
       <input type='hidden' name='authenticity_token' value={ authenticity_token } />
       <input type='hidden' name='_method' value='put' />
-      <input name='bank_account[name]' type='text' defaultValue={ attributes.name } />
-      <input type='submit' />
+      <label>
+        Name&nbsp;
+        <input name='bank_account[name]' type='text' defaultValue={ attributes.name } />
+      </label>
+      <input type='submit' className="submit-button"/>
     </form>
   )
 }
